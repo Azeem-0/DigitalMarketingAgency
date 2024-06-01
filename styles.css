@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 #container {
@@ -30,12 +31,11 @@
 
 #hero-section #hero-content>* {
     letter-spacing: 0px;
-    opacity: .8;
 }
 
-#hero-content #highlight,
-#hero-content #heading {
-    padding: 10px 0px;
+.highlight,
+.heading {
+    padding: 5px 0px;
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -44,15 +44,16 @@
     font-variation-settings: "wdth" 100;
 }
 
-#hero-content #highlight {
+.highlight {
     color: #FF3147;
 }
 
-#hero-content #heading {
+#hero-content .heading {
     font-size: 4vw;
 }
 
-#hero-content p {
+#hero-content p,
+#what-we-heading-section p {
     padding: 10px 0px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -93,8 +94,8 @@ button:hover {
 #contact-us-form {
     display: none;
     flex-direction: column;
-    padding: 10px 15px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 10px 30px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     padding-top: 25px;
     scale: 0.7;
     position: absolute;
@@ -163,4 +164,271 @@ form #checkbox-section input {
 #contact-us-form form button {
     width: inherit;
     padding: 10px 0px;
+}
+
+
+/* WHAT WE DO SECTION STYLING */
+#what-we-do-section {
+    width: 100dvw;
+    height: fit-content;
+    display: flex;
+    padding: 2em 1em 2em 9em;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    gap: 3em;
+    background-color: #FAFAFA;
+}
+
+#what-we-heading-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#what-we-main-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#what-we-main-heading .heading {
+    width: 10em;
+    font-size: 3vw;
+}
+
+#what-we-main-heading #highlight {
+    color: #FF3147;
+    font-size: 1.1em;
+}
+
+#what-we-heading-section p {
+    font-size: 0.8em;
+    width: 40em;
+}
+
+.comm-sec {
+    display: none;
+    width: inherit;
+    gap: 15px;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.comm-sec img {
+    width: 17em;
+}
+
+#carousel-dots {
+    display: flex;
+}
+
+.comm-butt {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.active-sec {
+    display: flex;
+}
+
+.active {
+    background-color: #FF3147;
+}
+
+/* CHOOSE USE SECTION STYLING */
+#choose-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0em;
+}
+
+#choose-cards-header {
+    display: flex;
+    font-size: .8em;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    opacity: .8;
+    width: 80dvw;
+    padding: 10px;
+    justify-content: space-around;
+    padding-top: 5em;
+}
+
+.choose-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 10px;
+    width: 15em;
+    min-height: 16em;
+    justify-content: space-evenly;
+}
+
+.choose-cards h2 {
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+.choose-cards img {
+    width: 3.5em;
+}
+
+/* PROJECT SECTION STYLING */
+#our-projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5em;
+    padding: 2em 0em;
+}
+
+#project-display {
+    display: flex;
+    gap: 2em;
+    position: relative;
+    height: 25em;
+}
+
+#project-display img {
+    height: 100%;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    justify-content: space-between;
+}
+
+.cards {
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 10px;
+    background: #F6F6F6;
+    font-family: "Open Sans", sans-serif;
+    opacity: .8;
+    font-size: .8em;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.cards:hover {
+    background-color: #FF3147;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.cards>* {
+    padding: 5px 0px;
+}
+
+
+
+/* EXPERTS GROWTH SECTION STYLING */
+
+#our-experts-section {
+    display: flex;
+    flex-direction: column;
+    width: 100dvw;
+    align-items: center;
+    padding: 2em 0em;
+    background-color: #FAFAFA;
+    gap: 2em;
+}
+
+#card-header {
+    display: flex;
+    width: inherit;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "Poppins", sans-serif;
+    font-size: .8em;
+    padding: 5px 0px;
+}
+
+.statistics {
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 2px;
+    align-items: center;
+    min-width: 13em;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.statistics:hover {
+    transform: scale(1.01);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+
+.statistics img {
+    width: 25px;
+}
+
+.statistics p,
+.statistics h3 {
+    padding: 0px 10px;
+}
+
+/* FEEDBACK SECTION STYLING */
+
+#feedback-section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 2em 0em;
+}
+
+#feedback {
+    width: 40em;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: .8em;
+    position: relative;
+    padding: 25px 10px;
+    text-align: justify;
+}
+
+#feedback img {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    width: 50px;
+    z-index: -1;
+}
+
+#feedback>* {
+    padding: 5px 0px;
+}
+
+#feedback-user {
+    color: rgb(116, 116, 116);
+}
+
+/* FOOTER SECTION STYLING */
+
+#footer {
+    width: 100dvw;
+    height: 15em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF3147;
+    margin: 2em 0em;
+}
+
+#footer img {
+    width: 50em;
 }

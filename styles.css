@@ -213,11 +213,76 @@ form #checkbox-section input {
     display: none;
     width: inherit;
     gap: 15px;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.comm-sec img {
+.sec1-hover1,
+.sec2-hover2,
+.sec3-hover3,
+.sec4-hover4 {
+    width: fit-content;
+    position: relative;
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.upper-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 17em;
+    height: 100%;
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    object-fit: cover;
+}
+
+.sec1-hover1:hover .upper-image,
+.sec2-hover2:hover .upper-image,
+.sec3-hover3:hover .upper-image,
+.sec4-hover4:hover .upper-image {
+    display: none;
+    transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.comm-inner-child {
+    padding: 10em 2em;
+    background-color: #FF3147;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: .7em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    text-align: center;
+}
+
+.comm-inner-child h1 {
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+.comm-inner-child img {
+    width: 3em;
+}
+
+.comm-inner-child a {
+    text-decoration: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #F4F4F4;
+    color: #FF3147;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+.comm-inner-child a img {
+    width: 20px;
 }
 
 #carousel-dots {
@@ -231,6 +296,17 @@ form #checkbox-section input {
     border-radius: 50%;
     margin: 0px 10px;
     cursor: pointer;
+}
+
+.comm-butt img {
+    display: none;
+}
+
+.active img {
+    display: block;
+    position: absolute;
+    width: 20px;
+    transform: translate(-30%, -30%);
 }
 
 .active-sec {
@@ -369,7 +445,7 @@ form #checkbox-section input {
 
 .statistics:hover {
     transform: scale(1.01);
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .statistics img {
@@ -411,6 +487,7 @@ form #checkbox-section input {
 
 #feedback>* {
     padding: 5px 0px;
+    font-weight: 500;
 }
 
 #feedback-user {
@@ -426,7 +503,7 @@ form #checkbox-section input {
     justify-content: center;
     align-items: center;
     background-color: #FF3147;
-    margin: 2em 0em;
+    margin: 2em 0em 0em;
 }
 
 #footer img {

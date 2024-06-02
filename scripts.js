@@ -17,7 +17,16 @@ function moveImage(value) {
         $(`.sec${i}`).removeClass("active-sec");
         $(`.sec${i}-dot`).removeClass("active");
     }
+
+    $(`.sec${value}`).css("transform", `translateX(20em)`);
+
+    setTimeout(() => {
+        $(`.sec${value}`).css("transform", `translateX(0em)`);
+    }, 50);
+
     $(`.sec${value}`).toggleClass("active-sec");
+
+
     $(`.sec${value}-dot`).toggleClass("active");
 }
 

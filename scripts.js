@@ -37,3 +37,5 @@ function changeImage(value) {
     console.log(element[0]);
     element[0].src = `./assets/${value}.png`;
 }
+
+changeImage(1);
